@@ -16,7 +16,7 @@ class Estudiante(models.Model):
         return sum([int(s) for s in self.cedula])
 
     def get_inicial_nombre(self):
-        return self.nombre(0)
+        return self.nombre[0]
 
 
 class NumeroTelefonico(models.Model):
