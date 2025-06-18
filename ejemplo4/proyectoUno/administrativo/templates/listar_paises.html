@@ -1,0 +1,12 @@
+<h2>Listado de Países</h2>
+
+<ul>
+  {% for pais in paises %}
+    <li>
+      {{ pais.nombre }} - {{ pais.capital }} 
+      [<a href="{% url 'mostrar_pais' pais.id %}">ver</a>]
+    </li>
+  {% endfor %}
+</ul>
+
+[<a href="{% url 'crear_pais' %}">Agregar nuevo país</a>]
