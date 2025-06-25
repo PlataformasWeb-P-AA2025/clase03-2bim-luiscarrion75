@@ -31,3 +31,35 @@
   {% endfor %}
 
 </table>
+<h1>Listado de estudiantes</h1>
+<hr>
+<h3>Numero de estudiantes {{numero_estudiantes}}</h3>
+<table border="1px">
+  <tr>
+    <th><b>Nombre</b></th>
+    <th><b>Apellido</b></th>
+    <th><b>Tipo</b></th>
+    <th><b>Edad</b></th>
+    <th><b>Matriculas</b></th>
+  </tr>
+  {% for e in matriculas %}
+  <tr>
+    <td>
+      {{e.estudiante.nombre}}
+    </td>
+    <td>
+      {{e.estudiante.apellido}}
+    </td>
+    <td>
+      {{e.estudiante.tipo_estudiante}}
+    </td>
+    <td>
+      {{e.estudiante.edad}}
+    </td>
+  </tr>
+  {% endfor %}
+</table><br>
+
+
+
+

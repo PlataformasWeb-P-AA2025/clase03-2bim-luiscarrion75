@@ -16,7 +16,6 @@ class Estudiante(models.Model):
             choices=opciones_tipo_estudiante)
     modulos = models.ManyToManyField('Modulo', through='Matricula')
 
-
     def __str__(self):
         return "%s - %s - %s - edad: %d - tipo: %s" % (self.nombre,
                 self.apellido,
