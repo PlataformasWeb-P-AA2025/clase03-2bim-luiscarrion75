@@ -96,7 +96,7 @@ def crear_pais(request):
         formulario = PaisForm(request.POST)
         if formulario.is_valid():
             formulario.save()
-            return redirect('listar_paises')  # redirige a lista después de crear
+            return redirect('listar_paises')  
     else:
         formulario = PaisForm()
     return render(request, 'crearPais.html', {'formulario': formulario})
